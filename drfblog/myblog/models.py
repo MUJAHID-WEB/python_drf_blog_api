@@ -28,6 +28,7 @@ class Post(models.Model):
 
     category = models.ForeignKey(
         Category, on_delete=models.PROTECT, default=1)
+    
     title = models.CharField(max_length=250)
     image = models.ImageField(
         _("Image"), upload_to=upload_to, default='posts/default.jpg')
